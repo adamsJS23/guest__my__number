@@ -86,14 +86,21 @@ function LeftBox({
         onClick={() => {
           setResponse(() =>
             random === guestNumber
-              ? "You win"
-              : `${
-                  random !== guestNumber
-                    ? setScore(() => score - 1)
-                    : `${random < guestNumber ? "Too low" : "Too high"}`
-                }`
+              ? "You Win"
+              : `${random < guestNumber ? "Too Low" : "Too High"}`
           );
         }}
+        // onClick={() => {
+        //   setResponse(() =>
+        //     random === guestNumber
+        //       ? "You win"
+        //       : `${
+        //           random !== guestNumber
+        //             ? setScore(() => score - 1)
+        //             : `${random < guestNumber ? "Too low" : "Too high"}`
+        //         }`
+        //   );
+        // }}
       >
         Check!
       </button>
