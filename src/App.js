@@ -8,7 +8,7 @@ function App() {
   const [random, setRandom] = useState(Math.floor(Math.random(0, 1) * 20 + 1));
 
   const [score, setScore] = useState(20);
-  const [guestNumber, setGusetNumber] = useState(
+  const [guestNumber, setGuestNumber] = useState(
     Math.floor(Math.random(0, 1) * 20 + 1)
   );
 
@@ -16,7 +16,7 @@ function App() {
     <div className={guestNumber === random ? "App winner" : "App"}>
       <Header
         guestNumber={guestNumber}
-        setGusetNumber={setGusetNumber}
+        setGuestNumber={setGuestNumber}
         random={random}
       />
       <main className="main">
@@ -34,7 +34,7 @@ function App() {
   );
 }
 
-function Header({ guestNumber, setGusetNumber, random }) {
+function Header({ guestNumber, setGuestNumber, random }) {
   console.log(guestNumber);
   return (
     <header className="header">
@@ -42,7 +42,7 @@ function Header({ guestNumber, setGusetNumber, random }) {
         <button
           className="btn btn--again"
           onClick={() =>
-            setGusetNumber(() => Math.floor(Math.random(0, 1) * 20 + 1))
+            setGuestNumber(() => Math.floor(Math.random(0, 1) * 20 + 1))
           }
         >
           Again
